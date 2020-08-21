@@ -11,37 +11,38 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.flag.flag.R;
 
-public class VisitedCountriesFragment extends Fragment {
+public class InfoPersoFragment extends Fragment {
 
     private String title;
     private int page;
 
-    public static VisitedCountriesFragment newInstance(int page, String title) {
-        VisitedCountriesFragment visitedCountriesFragment = new VisitedCountriesFragment();
+    public static InfoPersoFragment newInstance(int page, String title) {
+        InfoPersoFragment infoPersoFragment = new InfoPersoFragment();
         Bundle args = new Bundle();
-        args.putInt("1", page);
-        args.putString("Pays Visités", title);
-        visitedCountriesFragment.setArguments(args);
-        return visitedCountriesFragment;
+        args.putInt("0", page);
+        args.putString("Info Perso", title);
+        infoPersoFragment.setArguments(args);
+        return infoPersoFragment;
     }
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        page = getArguments().getInt("1", 0);
-        title = getArguments().getString("Pays Visités");
-    }
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_visited_countries, container, false);
+        return inflater.inflate(R.layout.profile_info_perso_fragement, container, false);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        page = getArguments().getInt("0", 0);
+        title = getArguments().getString("Info Perso");
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
     }
+
 }

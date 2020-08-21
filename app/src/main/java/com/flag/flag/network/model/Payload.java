@@ -5,6 +5,9 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
  */
 
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,7 +17,7 @@ import java.util.List;
  */
 public class Payload {
 
-    /*
+
     @SerializedName("user")
     private String mUsername;
 
@@ -57,6 +60,6 @@ public class Payload {
 
         System.out.println(json);
     }
-     */
+
 
 }

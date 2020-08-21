@@ -49,4 +49,26 @@
         <item>Bills</item>
         <item>Other</item>
     </string-array>
+    <string name="title_activity_authentication">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="title_activity_splash_screen">FullscreenActivity</string>
+    <string name="splash_text">DECOUVREZ ET PARTAGEZ VOTRE PLAISIR AUTOUR DE VOUS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Flag</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_profile">Profil</string>
+    <string name="nav_events">Evenements</string>
+    <string name="nav_settings">Parametres</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+
 </resources>

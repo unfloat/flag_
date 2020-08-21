@@ -8,16 +8,17 @@ import android.content.Context;
 import android.content.SyncResult;
 import android.os.Bundle;
 
-import com.kodelabs.mycosts.R;
-import com.kodelabs.mycosts.domain.model.Cost;
-import com.kodelabs.mycosts.domain.repository.CostRepository;
-import com.kodelabs.mycosts.network.RestClient;
-import com.kodelabs.mycosts.network.converters.RESTModelConverter;
-import com.kodelabs.mycosts.network.model.Payload;
-import com.kodelabs.mycosts.network.model.RESTCost;
-import com.kodelabs.mycosts.network.services.SyncService;
-import com.kodelabs.mycosts.storage.CostRepositoryImpl;
-import com.kodelabs.mycosts.utils.AuthUtils;
+import com.flag.flag.network.RestClient;
+import com.flag.flag.R;
+import com.flag.flag.domain.model.Cost;
+import com.flag.flag.domain.repository.CostRepository;
+import com.flag.flag.network.RestClient;
+import com.flag.flag.network.converters.RESTModelConverter;
+import com.flag.flag.network.model.Payload;
+import com.flag.flag.network.model.RESTCost;
+import com.flag.flag.network.services.SyncService;
+import com.flag.flag.storage.CostRepositoryImpl;
+import com.flag.flag.utils.AuthUtils;
 
 import java.io.IOException;
 import java.util.List;
@@ -75,7 +76,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
         public void onResponse(Call<Void> call, Response<Void> response) {
             Timber.i("UPLOAD SUCCESS: %d", response.code());
 
-            if (response.isSuccess()) {
+            if (response.isSuccessful()) {
                 mCostRepository.markSynced(mUnsyncedCosts);
             }
         }
@@ -117,7 +118,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
             Timber.i("UPLOAD SUCCESS: %d", response.code());
 
             // everything went well, mark local cost items as synced
-            if (response.isSuccess()) {
+            if (response.isSuccessful()) {
                 mCostRepository.markSynced(mUnsyncedCosts);
             }
 

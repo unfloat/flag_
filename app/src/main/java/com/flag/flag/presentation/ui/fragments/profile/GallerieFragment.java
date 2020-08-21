@@ -11,37 +11,38 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.flag.flag.R;
 
-public class VisitedCountriesFragment extends Fragment {
+public class GallerieFragment extends Fragment {
 
     private String title;
     private int page;
 
-    public static VisitedCountriesFragment newInstance(int page, String title) {
-        VisitedCountriesFragment visitedCountriesFragment = new VisitedCountriesFragment();
+    public static GallerieFragment newInstance(int page, String title) {
+        GallerieFragment gallerieFragment = new GallerieFragment();
         Bundle args = new Bundle();
-        args.putInt("1", page);
-        args.putString("Pays Visités", title);
-        visitedCountriesFragment.setArguments(args);
-        return visitedCountriesFragment;
+        args.putInt("2", page);
+        args.putString("Gallerie", title);
+        gallerieFragment.setArguments(args);
+        return gallerieFragment;
     }
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        page = getArguments().getInt("1", 0);
-        title = getArguments().getString("Pays Visités");
-    }
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_visited_countries, container, false);
+        return inflater.inflate(R.layout.progile_gallerie_fragment, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
 
-
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        page = getArguments().getInt("2", 0);
+        title = getArguments().getString("Gallerie");
     }
 }
+

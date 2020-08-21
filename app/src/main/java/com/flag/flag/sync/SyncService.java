@@ -1,9 +1,10 @@
-package com.kodelabs.mycosts.sync;
+package com.flag.flag.sync;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 /**
  * Created by dmilicic on 2/11/16.

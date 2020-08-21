@@ -1,10 +1,10 @@
-package com.kodelabs.mycosts.utils;
+package com.flag.flag.utils;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Context;
 
-import com.kodelabs.mycosts.R;
+import com.flag.flag.R;
 
 import timber.log.Timber;
 
