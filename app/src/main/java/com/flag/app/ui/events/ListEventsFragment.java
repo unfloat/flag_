@@ -2,6 +2,7 @@ package com.flag.app.ui.events;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -55,18 +56,13 @@ public class ListEventsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list_events, container, false);
         // Inflate the layout for this fragment
         eventRecyclerView = view.findViewById(R.id.event_recycler_view);
+        eventRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         eventList = new ArrayList<Event>();
         eventList.add(new Event("Title", "Organizer Name",10));
 
         Log.d("eventList",eventList.toString() );
-
-        // Create adapter passing in the sample user data
         EventsAdapter adapter = new EventsAdapter(eventList);
-        // Attach the adapter to the recyclerview to populate items
-        eventRecyclerView.setAdapter(adapter);
-        // Set layout manager to position the items
-        eventRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        // That's all!
+        eventRecyclerView.setAdapter(new EventsAdapter(eventList));
         return view;
     }
 }

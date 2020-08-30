@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.flag.app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.flag.app.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_list_events" />
+
+    <fragment
+        android:id="@+id/nav_list_events"
+        android:name="com.flag.app.ui.events.ListEventsFragment"
+        android:label="@string/menu_events_list"
+        tools:layout="@layout/fragment_list_events" />
+
+    <fragment
+        android:id="@+id/nav_add_event"
+        android:name="com.flag.app.ui.events.AddEventFragment"
+        android:label="@string/menu_events_add"
+        tools:layout="@layout/fragment_add_event" />
+
+    <fragment
+        android:id="@+id/nav_inbox"
+        android:name="com.flag.app.ui.inbox.MessagerieFragment"
+        android:label="@string/menu_inbox"
+        tools:layout="@layout/fragment_messagerie" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.flag.app.ui.parametres.ParametresFragment"
+        android:label="@string/menu_inbox"
+        tools:layout="@layout/fragment_parametres" />
+</navigation>

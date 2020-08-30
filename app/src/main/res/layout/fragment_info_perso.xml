@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/list_item_spacing"
+    android:scrollY="@dimen/list_item_spacing_half"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.profile.InfoPersoFragment">
+
+
+    <EditText
+        android:id="@+id/edit_nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:hint="Nom"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/edit_prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:hint="Prenom"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:ems="10"
+        android:hint="Date de Naissance"
+        android:inputType="date"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:ems="10"
+        android:hint="Mobile"
+        android:inputType="phone"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:ems="10"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:padding="@dimen/list_item_spacing" />
+
+    <EditText
+        android:id="@+id/edit_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:ems="10"
+        android:hint="Confirmer mot de passe"
+        android:inputType="textPassword"
+        android:padding="@dimen/list_item_spacing" />
+
+    <Button
+        android:id="@+id/save_info_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:padding="@dimen/list_item_spacing"
+        android:text="Enregistrer" />
+
+
+</LinearLayout>

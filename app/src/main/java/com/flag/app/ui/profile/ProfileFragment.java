@@ -26,18 +26,13 @@ public class ProfileFragment extends Fragment {
     ProfileTabbedFragmentsAdapter adapter;
     ViewPager2 viewPager;
     TabLayout tabLayout;
-    TabItem tabInfo, tabCountries, tabGallery;
-
 
     public ProfileFragment() {
         // Required empty public constructor
     }
 
     public static ProfileFragment newInstance() {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-
-        return fragment;
+        return new ProfileFragment();
     }
 
     @Override
@@ -46,37 +41,26 @@ public class ProfileFragment extends Fragment {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         tabLayout = view.findViewById(R.id.tab_layout);
-        tabInfo = view.findViewById(R.id.infoPersoTabItem);
-        tabCountries = view.findViewById(R.id.visitedCountriesTabItem);
-        tabGallery = view.findViewById(R.id.gallerieTabItem);
-        adapter = new ProfileTabbedFragmentsAdapter(this);
-        adapter.createFragment( 0);
-        adapter.createFragment( 1 );
-        adapter.createFragment( 2);
-
-
-        viewPager = view.findViewById(R.id.pager);
-        // Inflate the layout for this fragment
-        //setupViewPager(viewPager);
+        viewPager = (ViewPager2) view.findViewById(R.id.pager);
+        setupViewPager(viewPager);
         return view;
 
     }
 
-    /*
+
     private void setupViewPager(ViewPager2 viewPager) {
-        ProfileTabbedFragmentsAdapter  adapter = new ProfileTabbedFragmentsAdapter(getChildFragmentManager());
-        adapter.addFragment( InfoPersoFragment.newInstance(0,"Info Perso"));
-        adapter.addFragment( VisitedCountriesFragment.newInstance(1, "Pays visités") );
-        adapter.addFragment( GalleryFragment.newInstance(2, "Gallerie"));
+        ProfileTabbedFragmentsAdapter adapter = new ProfileTabbedFragmentsAdapter(getChildFragmentManager(), getLifecycle());
+        adapter.addFragment(0,"Info Perso");
+        adapter.addFragment(1, "Pays visités" );
+        adapter.addFragment(2, "Gallerie");
         viewPager.setAdapter(adapter);
     }
-     */
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

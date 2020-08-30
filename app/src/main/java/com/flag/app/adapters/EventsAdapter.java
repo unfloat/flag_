@@ -12,59 +12,39 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.flag.app.R;
 import com.flag.app.model.Event;
+import com.flag.app.viewholders.EventViewHolder;
 
 import java.util.List;
 
-public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventViewHolder> {
+public class EventsAdapter extends RecyclerView.Adapter<EventViewHolder> {
     private List<Event> listEvent;
-
     public EventsAdapter(List<Event> listEvent) {
         this.listEvent = listEvent;
+    }
+
+    @Override
+    public int getItemViewType(final int position) {
+        return R.layout.list_events_item;
     }
 
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
-        // Inflate the custom layout
-        View listEventView = inflater.inflate(R.layout.fragment_list_events, parent, false);
-        // Return a new holder instance
-        return new EventViewHolder(listEventView);
+        View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
+        return new EventViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         Event event = listEvent.get(position);
-        //String title = holder.eventTitle.toString();;
-
-
-        holder.eventTitle.setText(event.getEventTitle());
-        TextView organizer = holder.organizer;
-        organizer.setText((CharSequence) event.getOrganizer());
-
+        holder.getEventTitle().setText(String.valueOf(event.getEventTitle()));
+        holder.getOrganizer().setText(String.valueOf(event.getOrganizer()));
+        //holder.getVisitedCountryLayout().findViewWithTag("event_title").setT
     }
-
-
-
 
     @Override
     public int getItemCount() {
         return listEvent.size();
     }
 
-    public class EventViewHolder extends RecyclerView.ViewHolder {
-        public TextView eventTitle;
-        public TextView organizer;
-
-        public EventViewHolder( @NonNull View itemView) {
-            super(itemView);
-
-
-            eventTitle = (TextView) itemView.findViewById(R.id.event_title);
-            eventTitle.setText("ddddddd");
-           Log.d("tet", (String) eventTitle.getText());
-            organizer = (TextView) itemView.findViewById(R.id.event_organizer);
-        }
-    }
 }

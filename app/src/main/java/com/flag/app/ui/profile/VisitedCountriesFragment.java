@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.flag.app.R;
 import com.flag.app.adapters.VisitedCountriesAdapter;
+import com.flag.app.model.Event;
 import com.flag.app.model.VisitedCountryModel;
 
 import java.util.ArrayList;
@@ -55,20 +56,11 @@ public class VisitedCountriesFragment extends Fragment {
         Date date = new Date("25/12/2010");
         View view = inflater.inflate(R.layout.fragment_visited_countries, container, false);
         visitedCountriesRecyclerView = view.findViewById(R.id.visitedCountriesRecyclerView);
+        visitedCountriesList = new ArrayList<VisitedCountryModel>();
+
         visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name", date));
         visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name1", date));
-
-
-        // Create adapter passing in the sample user data
-        VisitedCountriesAdapter adapter = new VisitedCountriesAdapter(visitedCountriesList);
-        // Attach the adapter to the recyclerview to populate items
-        visitedCountriesRecyclerView.setAdapter(adapter);
-        // Set layout manager to position the items
-        visitedCountriesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        // That's all!
-
-
-        // Inflate the layout for this fragment
+        visitedCountriesRecyclerView.setAdapter(new VisitedCountriesAdapter(visitedCountriesList));
         return view;
     }
 }

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.flag.app.R;
 import com.flag.app.model.VisitedCountryModel;
+import com.flag.app.viewholders.EventViewHolder;
 import com.flag.app.viewholders.VisitedCountryViewHolder;
 
 import java.util.List;
@@ -24,24 +25,23 @@ public class VisitedCountriesAdapter extends RecyclerView.Adapter<VisitedCountry
         this.listVisitedCountries = listVisitedCountries;
     }
 
+    @Override
+    public int getItemViewType(final int position) {
+        return R.layout.list_visited_countries_item;
+    }
+
     @NonNull
     @Override
     public VisitedCountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
-        // Inflate the custom layout
-        View contactView = inflater.inflate(R.layout.list_visited_countries_item, parent, false);
-        // Return a new holder instance
-        VisitedCountryViewHolder viewHolder = new VisitedCountryViewHolder(contactView);
-        return viewHolder;    }
+        View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
+        return new VisitedCountryViewHolder(view);
+    }
 
     @Override
     public void onBindViewHolder(@NonNull VisitedCountryViewHolder holder, int position) {
         VisitedCountryModel visitedCountry = listVisitedCountries.get(position);
-        TextView visitedCountryName =  holder.visitedCountryName;
-        visitedCountryName.setText(visitedCountry.getCountryName());
-        TextView visitDate = holder.visitedCountryVisitDate;
-        visitDate.setText((CharSequence) visitedCountry.getCountryVisitDate());
+        holder.getVisitedCountryName().setText(String.valueOf(visitedCountry.getCountryName()));
+        holder.getVisitedCountryVisitDate().setText(String.valueOf(visitedCountry.getCountryVisitDate()));
     }
 
 
