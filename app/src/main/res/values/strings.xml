@@ -15,11 +15,27 @@
     <string name="menu_settings">Paramètres</string>
     <string name="menu_logout">Se déconnecter</string>
 
+
+    <string name="splash_text">DECOUVREZ ET PARTAGEZ VOTRE PLAISIR AUTOUR DE VOUS</string>
+
     // buttons
     <string name="join_event">Joindre</string>
 
+    // authentication
+    <string name="login_text">Se connecter</string>
+    <string name="sign_up_text">S\'inscrire</string>
+    <string name="forgot_password_text">Mot de passe oublié?</string>
+    <string name="sm_login">Ou connectez-vous avec</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+
+
+    <string name="parametre">Paramètres</string>
+    <string name="title_activity_foo">FooActivity</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
