@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,11 +56,15 @@ public class VisitedCountriesFragment extends Fragment {
                              Bundle savedInstanceState) {
         Date date = new Date("25/12/2010");
         View view = inflater.inflate(R.layout.fragment_visited_countries, container, false);
+
         visitedCountriesRecyclerView = view.findViewById(R.id.visitedCountriesRecyclerView);
+        visitedCountriesRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
         visitedCountriesList = new ArrayList<VisitedCountryModel>();
 
         visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name", date));
         visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name1", date));
+        Log.d("visitedCountriesList", visitedCountriesList.toString());
         visitedCountriesRecyclerView.setAdapter(new VisitedCountriesAdapter(visitedCountriesList));
         return view;
     }

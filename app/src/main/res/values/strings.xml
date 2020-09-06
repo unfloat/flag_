@@ -28,9 +28,11 @@
     <string name="sm_login">Ou connectez-vous avec</string>
     <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
 
+    // settings
+    <string name="settings">Paramètres</string>
+    <string name="about">A propos</string>
 
-    <string name="parametre">Paramètres</string>
-    <string name="title_activity_foo">FooActivity</string>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -19,8 +19,8 @@ import com.flag.app.viewholders.VisitedCountryViewHolder;
 import java.util.List;
 
 public class VisitedCountriesAdapter extends RecyclerView.Adapter<VisitedCountryViewHolder> {
-
     private List<VisitedCountryModel> listVisitedCountries;
+
     public VisitedCountriesAdapter(List<VisitedCountryModel> listVisitedCountries) {
         this.listVisitedCountries = listVisitedCountries;
     }

@@ -16,7 +16,6 @@ public class EventViewHolder extends RecyclerView.ViewHolder {
 
         eventTitle = (TextView) itemView.findViewById(R.id.event_title);
         organizer = (TextView) itemView.findViewById(R.id.event_organizer);
-        visitedCountryLayout = (LinearLayout) itemView.findViewById(R.id.visited_country_layout);
     }
 
     public TextView getEventTitle(){

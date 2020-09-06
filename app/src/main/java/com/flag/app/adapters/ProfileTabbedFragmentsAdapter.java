@@ -2,6 +2,7 @@ package com.flag.app.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -16,7 +17,6 @@ import java.util.List;
 public class ProfileTabbedFragmentsAdapter extends FragmentStateAdapter {
     private static int NUM_ITEMS = 3;
 
-
     private List<Fragment> mFragmentList = new ArrayList<>();
 
     public ProfileTabbedFragmentsAdapter(@NonNull Fragment fragment) {
@@ -24,21 +24,11 @@ public class ProfileTabbedFragmentsAdapter extends FragmentStateAdapter {
     }
 
 
-    public ProfileTabbedFragmentsAdapter(@NonNull FragmentManager fragmentManager, Lifecycle lifecycle) {
-        super(fragmentManager, lifecycle);
+    public ProfileTabbedFragmentsAdapter(FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
 
-    public void addFragment(int position, String title) {
-        switch (position) {
-            case 0:
-                mFragmentList.add(InfoPersoFragment.newInstance(position, title));
 
-            case 1:
-                mFragmentList.add(VisitedCountriesFragment.newInstance(position, title));
-            case 2:
-                mFragmentList.add(GalleryFragment.newInstance(position, title));
-        }
-    }
 
 
     @NonNull

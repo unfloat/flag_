@@ -66,9 +66,7 @@ public class ParametresFragment extends Fragment {
         about_text.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                              //changeFragment(AboutFragment.newInstance(), true, false);
-                                              Log.d("todo", "TODO");
-                                          }
+                                              changeFragment(AboutFragment.newInstance(), false, false); }
                                       });
     }
 
@@ -101,7 +99,7 @@ public class ParametresFragment extends Fragment {
                     //transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
                 }
 
-                transaction.replace(R.id.fragment_container, frag, backStateName);
+                transaction.replace(R.id.container, frag, backStateName);
 
                 if (saveInBackstack) {
                     Log.d("addToBackTack", "Change Fragment: addToBackTack " + backStateName);
