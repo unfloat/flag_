@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">Flag</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -9,6 +9,7 @@
 
     <string name="menu_home">Accueil</string>
     <string name="menu_profile">Profile Temporary</string>
+    <string name="menu_map">Flag Map</string>
     <string name="menu_events_list">Liste des évènenements</string>
     <string name="menu_events_add">Ajouter un évènement</string>
     <string name="menu_inbox">Boite de messagerie</string>
@@ -24,9 +25,14 @@
     // authentication
     <string name="login_text">Se connecter</string>
     <string name="sign_up_text">S\'inscrire</string>
-    <string name="forgot_password_text">Mot de passe oublié?</string>
+    <string name="begin_text">Commençons</string>
+    <string name="send_text">Envoyer</string>
     <string name="sm_login">Ou connectez-vous avec</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="forgot_password_text">Mot de passe oublié?</string>
+    <string name="forgot_password_info">Entrez votre email et nous vous envoyons un nouveau mot de passe.</string>
+
+    // mapbox
+    <string name="mapbox_access_token">pk.eyJ1IjoidW5mbG9hdCIsImEiOiJja2Yzd212bWIwN2NsMnZvZjQ3MmV5NG03In0.d8a8DZkRWJmOfSD_gdY3kw</string>
 
     // settings
     <string name="settings">Paramètres</string>

@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.flag.app.MainActivity;
 import com.flag.app.R;
+import com.flag.app.presentation.activities.AuthenticationActivity;
+import com.flag.app.ui.parametres.AboutFragment;
 import com.flag.app.ui.profile.ProfileFragment;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -25,6 +28,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class LoginFragment extends BottomSheetDialogFragment {
 
     Button loginBtn;
+    TextView forgotPassword;
     public static LoginFragment newInstance() {
 
         final LoginFragment fragment = new LoginFragment();
@@ -43,6 +47,15 @@ public class LoginFragment extends BottomSheetDialogFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        forgotPassword = (TextView) view.findViewById(R.id.forgot_password_text);
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }});
+
+
         loginBtn = (Button) view.findViewById(R.id.login);
         loginBtn.setOnClickListener(new View.OnClickListener() {
                                         @Override

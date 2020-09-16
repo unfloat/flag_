@@ -3,30 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_main"
+        >
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home"
+            />
+
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_profile" />
+            android:title="@string/menu_profile"
+            />
+
+        <item
+            android:id="@+id/nav_map"
+            android:title="@string/menu_map"
+            />
         <item
             android:id="@+id/nav_list_events"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_events_list" />
+            android:title="@string/menu_events_list"
+            />
         <item
             android:id="@+id/nav_add_event"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_events_add" />
+
         <item
             android:id="@+id/nav_inbox"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_inbox" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_settings" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/menu_bottom"
+        >
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/menu_logout" />
+
     </group>
 </menu>

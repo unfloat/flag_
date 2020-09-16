@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualité"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/whats_on_your_mind"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/list_item_spacing"
+        android:lines="3"
+        android:paddingVertical="@dimen/list_item_spacing_half"
+        android:paddingHorizontal="@dimen/list_item_spacing_half"
+        android:ems="10"
+        android:textSize="15sp"
+        android:inputType="textPersonName"
+        android:minLines="3"
+        android:background="@drawable/edit_text"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:textColor="@color/edit_text"
+        android:text="What's on you mind"
+        android:drawableRight="@drawable/ic_menu_gallery"
+        />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@null" />
+        android:layout_margin="@dimen/list_item_spacing"
+        >
+
+    </ListView>
 
 </LinearLayout>

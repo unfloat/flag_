@@ -1,72 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="480dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
     android:padding="20dp"
-    android:id="@+id/bottom_sign_up_form">
+    android:id="@+id/bottom_sign_up_form"
+    android:background="@drawable/bottom_sheets">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome Back"
-        android:textColor="@android:color/black"
-        android:textSize="30dp"
+        android:text="@string/sign_up_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
         android:layout_marginBottom="10dp"
-        android:gravity="center"/>
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create a new account"
+        android:text="@string/begin_text"
         android:textColor="@android:color/darker_gray"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="15sp"
+        android:layout_marginBottom="20dp"
+        />
 
     <EditText
+        android:id="@+id/sign_up_nom"
+        android:background="@drawable/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
+        android:hint="Nom"
         android:layout_marginBottom="20dp"
         android:padding="12.5dp"/>
 
     <EditText
+        android:id="@+id/sign_up_prenom"
+        android:background="@drawable/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prenom"
+        android:layout_marginBottom="20dp"
+        android:padding="12.5dp"/>
+
+    <EditText
+        android:id="@+id/sign_up_birthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:hint="Date de naissance"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text"
+        />
+
+    <EditText
+        android:id="@+id/sign_up_mobile"
+        android:background="@drawable/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Mobile"
+        android:padding="12.5dp"
         android:layout_marginBottom="20dp"
-        android:padding="12.5dp"/>
+        android:inputType="phone"/>
 
     <EditText
+        android:id="@+id/sign_up_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:padding="12.5dp"
-        android:layout_marginBottom="20dp"/>
+        android:ems="10"
+        android:hint="Email"
+        android:padding="10dp"
+        android:background="@drawable/edit_text"
+        android:layout_marginBottom="20dp"
+        android:inputType="textEmailAddress"
+        />
+
+
+    <EditText
+        android:id="@+id/sign_up_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Confirmer mot de passe"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/sign_up_pwd_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Confirmer mot de passe"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/register"
-        android:layout_alignParentBottom="true"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="20dp"/>
-
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Already have an account Login"
-        android:textSize="20dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/sign_up_text"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button"/>
+
+
+
 
 </LinearLayout>

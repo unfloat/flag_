@@ -68,7 +68,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onPageSelected(int position){
                 super.onPageSelected(position);
-                adapter.notifyItemChanged(position);
+                //adapter.notifyItemChanged(position);
             }
         });
         tabLayout = view.findViewById(R.id.tab_layout);
@@ -85,18 +85,19 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
-
-
-
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+
 
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+
 
             }
         });

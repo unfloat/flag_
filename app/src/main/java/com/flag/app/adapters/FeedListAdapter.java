@@ -128,7 +128,7 @@ public class FeedListAdapter extends BaseAdapter {
                     });
         } else {
             feedImageView.setVisibility(View.GONE);
-        }
+        }scre
          */
 
         return convertView;

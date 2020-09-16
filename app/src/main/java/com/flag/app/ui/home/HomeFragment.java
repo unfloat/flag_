@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment{
         Log.d("listAdapter", listAdapter.toString());
 
         // These two lines not needed,
-        // just to get the look of facebook (changing background color & hiding the icon)
+        // just to get the look of facebook (changing smalltop color & hiding the icon)
         /*
         getActivity().getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3b5998")));
         getActivity().getActionBar().setIcon(
@@ -63,8 +63,8 @@ public class HomeFragment extends Fragment{
          */
 
         // We first check for cached request
-        /*
-        Cache cache = AppController.getInstance().getRequestQueue().getCache();
+
+        Cache cache = AppController.getInstance().getRequestQueue(getContext()).getCache();
         Cache.Entry entry = cache.get(URL_FEED);
         if (entry != null) {
             // fetch the data from cache
@@ -100,9 +100,9 @@ public class HomeFragment extends Fragment{
             });
 
             // Adding request to volley request queue
-            AppController.getInstance().addToRequestQueue(jsonReq);
+            AppController.getInstance().addToRequestQueue(jsonReq, getContext());
         }
-         */
+
     return view;
     }
 

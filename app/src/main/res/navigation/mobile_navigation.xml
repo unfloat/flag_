@@ -6,6 +6,12 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_flag_app"
+        android:name="com.flag.app.ui.map.FlagMapFragment"
+        android:label="@string/menu_map"
+        tools:layout="@layout/fragment_flag_map"/>
+
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.flag.app.ui.home.HomeFragment"
         android:label="@string/menu_home"
@@ -14,8 +20,9 @@
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.flag.app.ui.profile.ProfileFragment"
-        android:label="@string/menu_profile"
         tools:layout="@layout/fragment_list_events" />
+
+    <!-- android:label="@string/menu_profile" -->
 
     <fragment
         android:id="@+id/nav_list_events"
@@ -38,6 +45,6 @@
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.flag.app.ui.parametres.ParametresFragment"
-        android:label="@string/menu_inbox"
+        android:label="@string/menu_settings"
         tools:layout="@layout/fragment_parametres" />
 </navigation>

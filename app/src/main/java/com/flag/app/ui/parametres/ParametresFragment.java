@@ -66,7 +66,8 @@ public class ParametresFragment extends Fragment {
         about_text.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                              changeFragment(AboutFragment.newInstance(), false, false); }
+                                              changeFragment(AboutFragment.newInstance(), false, false);
+                                          }
                                       });
     }
 
@@ -114,7 +115,7 @@ public class ParametresFragment extends Fragment {
                 // custom effect if fragment is already instanciated
             }
         } catch (IllegalStateException exception) {
-            Log.w("tnekna", "Unable to commit fragment, could be activity as been killed in background. " + exception.toString());
+            Log.w("tnekna", "Unable to commit fragment, could be activity as been killed in smalltop. " + exception.toString());
         }
     }
 
