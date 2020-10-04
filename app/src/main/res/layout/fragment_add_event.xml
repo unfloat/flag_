@@ -82,7 +82,10 @@
             android:textSize="12sp"
             android:hint="JJ-MM-AA"
             android:inputType="date"
-             />
+            android:drawableLeft="@drawable/calendar_today"
+            android:drawableStart="@drawable/calendar_today"
+            android:drawablePadding="8dp"
+            />
 
         <EditText
             android:id="@+id/edit_event_starting_time"
@@ -97,12 +100,16 @@
             android:textSize="12sp"
             android:hint="HH-MM"
             android:inputType="time"
+            android:drawableRight="@drawable/time"
+            android:drawableEnd="@drawable/time"
+            android:drawablePadding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.900"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.255" />
+            app:layout_constraintVertical_bias="0.255"
+             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -158,6 +165,9 @@
             android:hint="JJ-MM-AA"
             android:textSize="12sp"
             android:inputType="date"
+            android:drawableLeft="@drawable/calendar_today"
+            android:drawableStart="@drawable/calendar_today"
+            android:drawablePadding="8dp"
             />
 
         <EditText
@@ -172,6 +182,9 @@
             android:hint="HH-MM"
             android:textSize="12sp"
             android:inputType="time"
+            android:drawableRight="@drawable/time"
+            android:drawableEnd="@drawable/time"
+            android:drawablePadding="8dp"
             />
     </LinearLayout>
 
@@ -191,9 +204,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/list_item_spacing"
         android:layout_marginBottom="@dimen/list_item_spacing"
-
+        android:textSize="12sp"
         android:ems="10"
-        android:padding="@dimen/list_item_spacing_half"
+        android:padding="@dimen/list_item_spacing"
         android:hint="Localisation"
         android:inputType="textPostalAddress"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -201,6 +214,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.58"
+        android:drawableRight="@drawable/location"
+        android:drawableEnd="@drawable/location"
+        android:drawablePadding="8dp"
         />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -210,7 +226,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/list_item_spacing"
         android:layout_marginBottom="@dimen/list_item_spacing"
-        android:padding="@dimen/list_item_spacing_half"
+        android:textSize="12sp"
+        android:padding="@dimen/list_item_spacing"
         android:hint="Description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

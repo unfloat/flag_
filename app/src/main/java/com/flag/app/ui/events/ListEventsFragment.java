@@ -17,8 +17,12 @@ import com.flag.app.adapters.EventsAdapter;
 import com.flag.app.adapters.VisitedCountriesAdapter;
 import com.flag.app.model.Event;
 import com.flag.app.model.VisitedCountryModel;
+import com.github.pgreze.reactions.ReactionPopup;
+import com.github.pgreze.reactions.ReactionsConfig;
+import com.github.pgreze.reactions.ReactionsConfigBuilder;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,20 +38,12 @@ public class ListEventsFragment extends Fragment {
     }
 
     public static ListEventsFragment newInstance() {
-        ListEventsFragment fragment = new ListEventsFragment();
-
-        return fragment;
+        return new ListEventsFragment();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-         */
     }
 
     @Override
@@ -58,9 +54,10 @@ public class ListEventsFragment extends Fragment {
         eventRecyclerView = view.findViewById(R.id.event_recycler_view);
         eventRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         eventList = new ArrayList<Event>();
-        eventList.add(new Event("Title", "Organizer Name",10));
+        eventList.add(new Event("First Event", "First Organizer",10));
+        eventList.add(new Event("Second Event", "Second Organizer",2));
+        eventList.add(new Event("Third Event", "Third Organizer",8));
 
-        Log.d("eventList",eventList.toString() );
         EventsAdapter adapter = new EventsAdapter(eventList);
         eventRecyclerView.setAdapter(new EventsAdapter(eventList));
         return view;

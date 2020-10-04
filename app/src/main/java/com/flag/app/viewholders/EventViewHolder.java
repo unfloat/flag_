@@ -9,7 +9,6 @@ import com.flag.app.R;
 public class EventViewHolder extends RecyclerView.ViewHolder {
     public TextView eventTitle;
     public TextView organizer;
-    public LinearLayout visitedCountryLayout;
 
     public EventViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -25,11 +24,6 @@ public class EventViewHolder extends RecyclerView.ViewHolder {
         return organizer;
     }
 
-    /* test
-     public LinearLayout getVisitedCountryLayout()
-    {
-        return visitedCountryLayout;
-    }
-     */
+
 }
 

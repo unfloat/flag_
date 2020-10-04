@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,7 +16,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.flag.app.MainActivity;
 import com.flag.app.R;
+import com.flag.app.presentation.activities.AuthenticationActivity;
+import com.flag.app.presentation.fragments.authentication.SignUpDialogFragment;
+
+import java.util.Objects;
+
+import timber.log.Timber;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,12 +71,22 @@ public class ParametresFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         about_text = (TextView) view.findViewById(R.id.text_btn_about);
+        langues_text = (TextView) view.findViewById(R.id.language);
+
         about_text.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                              changeFragment(AboutFragment.newInstance(), false, false);
+                                           NavHostFragment.findNavController(ParametresFragment.this).navigate(R.id.action_nav_settings_to_aboutFragment);
                                           }
                                       });
+
+
+        langues_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new BottomSheetChooseLanguageFragment().show(requireActivity().getSupportFragmentManager(), "bottom_language");
+            }
+        });
     }
 
     /**
@@ -86,36 +104,28 @@ public class ParametresFragment extends Fragment {
         try {
 
             FragmentManager manager = getFragmentManager();
-            if (manager != null){
+            if (manager != null) {
+                boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
 
+                if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) {
+                    //fragment not in back stack, create it.
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    /*
+                    if (animate) {
+                        //transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                    }
+                     */
+                    transaction.replace(R.id.container, frag, backStateName);
 
-            boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
-
-            if (!fragmentPopped && manager.findFragmentByTag(backStateName) == null) {
-                //fragment not in back stack, create it.
-                FragmentTransaction transaction = manager.beginTransaction();
-
-                if (animate) {
-                    Log.d("boom", "Change Fragment: animate");
-                    //transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                    if (saveInBackstack) {
+                        transaction.addToBackStack(backStateName);
+                    }
+                    transaction.commit();
                 }
-
-                transaction.replace(R.id.container, frag, backStateName);
-
-                if (saveInBackstack) {
-                    Log.d("addToBackTack", "Change Fragment: addToBackTack " + backStateName);
-                    transaction.addToBackStack(backStateName);
-                } else {
-                    Log.d("oups", "Change Fragment: NO addToBackTack");
-                }
-
-                transaction.commit();
             }
-            } else {
-                // custom effect if fragment is already instanciated
-            }
+
         } catch (IllegalStateException exception) {
-            Log.w("tnekna", "Unable to commit fragment, could be activity as been killed in smalltop. " + exception.toString());
+            Timber.d("Unable to commit fragment, could be activity as been killed in smalltop. " + exception.toString());
         }
     }
 

@@ -9,4 +9,23 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+
+    <declare-styleable name="GalleryFragment">
+        <attr name="gallerySpacing" format="enum">
+            <enum name="columnWidth" value="10"/>
+            <enum name="spacingWidth" value="1"/>
+            <enum name="spacingWidthUniform" value="5"/>
+            <enum name="columnNumber" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ExpandablePanel">
+            <attr name="handle" format="reference" />
+            <attr name="content" format="reference" />
+            <attr name="collapsedHeight" format="dimension"/>
+            <attr name="animationDuration" format="integer"/>
+        </declare-styleable>
+
 </resources>

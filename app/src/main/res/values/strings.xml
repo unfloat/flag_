@@ -15,6 +15,7 @@
     <string name="menu_inbox">Boite de messagerie</string>
     <string name="menu_settings">Paramètres</string>
     <string name="menu_logout">Se déconnecter</string>
+    <string name="menu_about">A propos</string>
 
 
     <string name="splash_text">DECOUVREZ ET PARTAGEZ VOTRE PLAISIR AUTOUR DE VOUS</string>
@@ -32,7 +33,10 @@
     <string name="forgot_password_info">Entrez votre email et nous vous envoyons un nouveau mot de passe.</string>
 
     // mapbox
-    <string name="mapbox_access_token">pk.eyJ1IjoidW5mbG9hdCIsImEiOiJja2Yzd212bWIwN2NsMnZvZjQ3MmV5NG03In0.d8a8DZkRWJmOfSD_gdY3kw</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoidW5mbG9hdCIsImEiOiJja2ZidzYwZHkxYTJxMnVvOGxhcDVqY2VoIn0.us6BIn1JVrMzJ7ufhJuDjQ</string>
+
+    // about
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
 
     // settings
     <string name="settings">Paramètres</string>

@@ -1,5 +1,6 @@
 package com.flag.app.ui.profile;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -32,6 +33,7 @@ public class VisitedCountriesFragment extends Fragment {
     ArrayList<VisitedCountryModel> visitedCountriesList;
 
 
+
     public VisitedCountriesFragment() {
         // Required empty public constructor
     }
@@ -62,9 +64,8 @@ public class VisitedCountriesFragment extends Fragment {
 
         visitedCountriesList = new ArrayList<VisitedCountryModel>();
 
-        visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name", date));
-        visitedCountriesList.add(new VisitedCountryModel("Flag", "Country Name1", date));
-        Log.d("visitedCountriesList", visitedCountriesList.toString());
+        VisitedCountryModel visitedCountry = new VisitedCountryModel();
+        visitedCountriesList.add(new VisitedCountryModel("brazil.jpg", "Brazil", date));
         visitedCountriesRecyclerView.setAdapter(new VisitedCountriesAdapter(visitedCountriesList));
         return view;
     }

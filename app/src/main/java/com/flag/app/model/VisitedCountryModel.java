@@ -1,14 +1,5 @@
 package com.flag.app.model;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.flag.app.R;
-
 import java.util.Date;
 
 public class VisitedCountryModel {
@@ -23,7 +14,9 @@ public class VisitedCountryModel {
         this.countryFlag = countryFlag;
         this.countryName = countryName;
         this.countryVisitDate = countryVisitDate;
+    }
 
+    public VisitedCountryModel() {
 
     }
 

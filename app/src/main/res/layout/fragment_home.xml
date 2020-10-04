@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Actualité"
+        android:textColor="@color/white"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_marginBottom="20dp"
@@ -34,15 +35,13 @@
         android:textColor="@color/edit_text"
         android:text="What's on you mind"
         android:drawableRight="@drawable/ic_menu_gallery"
-        />
+        android:drawableEnd="@drawable/ic_menu_gallery" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/list_item_spacing"
-        >
-
+        android:layout_margin="@dimen/list_item_spacing">
     </ListView>
 
 </LinearLayout>

@@ -22,6 +22,9 @@
     <dimen name="feed_item_border_width">1dp</dimen>
 
 
+    <!-- Gallery dimens -->
+    <dimen name="gallery_span">0dp</dimen>
+
     <!-- Bottom sheet dimens -->
     <dimen name="bottom_sheet_radius">10dp</dimen>
 

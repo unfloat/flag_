@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_language"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.parametres.BottomSheetChooseLanguageFragment">
+    android:background="@drawable/bottom_sheets"
+    android:orientation="vertical"
+    tools:context=".ui.parametres.BottomSheetChooseLanguageFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/undo_choose_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Anuuler"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/ok_choose_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:padding="8dp"
+
+            android:text="Ok"
+            android:gravity="right"/>
+             </LinearLayout>
+
+    <TextView
+        android:id="@+id/arabe_choose_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Arabe"
+        android:textSize="25sp"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/french_choose_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Français" />
+    <TextView
+        android:id="@+id/english_choose_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Anglais" />
+    <TextView
+        android:id="@+id/deutch_choose_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="Allemand" />
+</LinearLayout>

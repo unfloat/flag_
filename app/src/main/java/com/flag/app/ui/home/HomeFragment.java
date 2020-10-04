@@ -52,15 +52,6 @@ public class HomeFragment extends Fragment{
         listAdapter = new FeedListAdapter(this, feedItems);
         listView.setAdapter(listAdapter);
 
-        Log.d("listAdapter", listAdapter.toString());
-
-        // These two lines not needed,
-        // just to get the look of facebook (changing smalltop color & hiding the icon)
-        /*
-        getActivity().getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3b5998")));
-        getActivity().getActionBar().setIcon(
-                new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-         */
 
         // We first check for cached request
 

@@ -53,7 +53,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         viewPager2 = (ViewPager2) view.findViewById(R.id.pager);
-        viewPager2.setOffscreenPageLimit(1);
+        //viewPager2.setOffscreenPageLimit(1);
         final ProfileTabbedFragmentsAdapter adapter = new ProfileTabbedFragmentsAdapter(this);
         adapter.createFragment(0);
         adapter.createFragment(1);
@@ -72,13 +72,13 @@ public class ProfileFragment extends Fragment {
             }
         });
         tabLayout = view.findViewById(R.id.tab_layout);
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        //tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
         tabLayout.addTab(tabLayout.newTab().setText("Info Perso"));
         tabLayout.addTab(tabLayout.newTab().setText("Pays visités"));
         tabLayout.addTab(tabLayout.newTab().setText("Gallerie"));
-        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+       // tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             FragmentTransaction fragmentTransaction;
@@ -91,16 +91,15 @@ public class ProfileFragment extends Fragment {
             public void onTabUnselected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
 
-
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
 
-
             }
         });
+
         //displaying tabs
         //setupViewPager(viewPager2);
 

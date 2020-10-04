@@ -11,15 +11,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.flag.app.R;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.constants.Style;
+import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+
+import java.util.Objects;
 
 public class FlagMapFragment extends Fragment {
-
     private MapView mapView;
-
 
     @Nullable
     @Override
@@ -27,19 +29,16 @@ public class FlagMapFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_flag_map, container, false);
+        Mapbox.getInstance(requireContext(), getString(R.string.mapbox_access_token));
+        mapView = (MapView) view.findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(@NonNull MapboxMap mapboxMap) {
 
-        Mapbox.getInstance(Mapbox.getApplicationContext(), getString(R.string.mapbox_access_token));
-
-        Log.d("here", "here");
-
-
-
-        //mapView = (MapView) view.findViewById(R.id.mapView);
-        //mapView.onCreate(savedInstanceState);
-        /*
-        mapView.getMapAsync(new
+            }
         });
-         */
+
         return view;
     }
 

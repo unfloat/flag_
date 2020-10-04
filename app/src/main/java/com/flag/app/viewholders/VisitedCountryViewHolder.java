@@ -15,6 +15,8 @@ import com.flag.app.model.VisitedCountryModel;
 import java.util.List;
 
 public class VisitedCountryViewHolder extends RecyclerView.ViewHolder {
+
+
     public ImageView visitedCountryImage;
     public TextView visitedCountryName, visitedCountryVisitDate;
 
@@ -33,6 +35,14 @@ public class VisitedCountryViewHolder extends RecyclerView.ViewHolder {
     public TextView getVisitedCountryVisitDate()
     {
         return visitedCountryVisitDate;
+    }
+
+    public ImageView getVisitedCountryImage() {
+        return visitedCountryImage;
+    }
+
+    public void setVisitedCountryImage(ImageView visitedCountryImage) {
+        this.visitedCountryImage = visitedCountryImage;
     }
 
 
