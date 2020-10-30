@@ -8,13 +8,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.map.FlagMapFragment"
     android:background="@drawable/tooltip"
+    android:clipToPadding="false"
+    xmlns:mapbox="http://schemas.android.com/tools"
     >
 
-    <com.mapbox.mapboxsdk.maps.MapView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="350dp"
+        android:layout_marginVertical="550dp"
+         />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginHorizontal="400dp"
+        android:layout_marginVertical="550dp"
+        />
+
+    <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    </com.mapbox.mapboxsdk.maps.MapView>
+        android:layout_height="match_parent" />
+
 
 </RelativeLayout>

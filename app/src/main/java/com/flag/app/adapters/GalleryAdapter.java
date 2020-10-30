@@ -14,8 +14,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import timber.log.Timber;
-
 
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
 
@@ -47,7 +45,6 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
                     .centerCrop()
                     .into(holder.getSiv());
 
-        Timber.d(String.valueOf(getItemCount()));
         Log.d("size", String.valueOf(getItemCount()));
 
             holder.getSiv().setOnClickListener(new View.OnClickListener() {

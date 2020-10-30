@@ -23,7 +23,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import timber.log.Timber;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -102,7 +101,6 @@ public class GalleryFragment extends Fragment {
             result = BitmapFactory.decodeStream(url.openConnection().getInputStream());
         }
 
-        Timber.d(result.toString());
         return result;
     }
 

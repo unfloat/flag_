@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_home, R.id.nav_list_events, R.id.nav_map,
                 R.id.nav_add_event,
                 R.id.nav_settings
-                , R.id.action_nav_settings_to_aboutFragment
                 )
                 .setDrawerLayout(drawer)
                 .build();

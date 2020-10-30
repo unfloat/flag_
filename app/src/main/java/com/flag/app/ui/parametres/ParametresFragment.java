@@ -2,28 +2,21 @@ package com.flag.app.ui.parametres;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.fragment.NavHostFragment;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.flag.app.MainActivity;
 import com.flag.app.R;
-import com.flag.app.presentation.activities.AuthenticationActivity;
-import com.flag.app.presentation.fragments.authentication.SignUpDialogFragment;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
-import java.util.Objects;
-
-import timber.log.Timber;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,7 +69,9 @@ public class ParametresFragment extends Fragment {
         about_text.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View view) {
-                                           NavHostFragment.findNavController(ParametresFragment.this).navigate(R.id.action_nav_settings_to_aboutFragment);
+                                                Intent intent = new Intent(getContext(), AboutActivity.class);
+                                                startActivity(intent);
+
                                           }
                                       });
 
@@ -125,7 +120,7 @@ public class ParametresFragment extends Fragment {
             }
 
         } catch (IllegalStateException exception) {
-            Timber.d("Unable to commit fragment, could be activity as been killed in smalltop. " + exception.toString());
+            Snackbar.make(this.getView(), "Unable to commit fragment, could be activity as been killed in smalltop. " + exception.toString(), BaseTransientBottomBar.LENGTH_LONG);
         }
     }
 
